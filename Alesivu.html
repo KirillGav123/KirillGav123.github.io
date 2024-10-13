@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KB&T valikoima</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+        .nav a:hover {
+            background-color: #575757;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .image-container {
+            margin: 10px;
+            text-align: center;
+        }
+        .image-container img {
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+        }
+        @media (max-width: 600px) {
+            .image-container img {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="Logo.png" alt="Description of Image" style="float: right; height: 99px; width: 110px;">
+
+    <header>
+        <h1>Kirill's Bait&Tackle</h1>
+    </header>
+    <nav class="nav">
+        <a href="oma sivu dig.html">Etusivu</a>
+        <a href="Alesivu.html">Valikoima</a>
+        <a href="Alennuskkoodi.html">Ostoskori</a>
+    </nav>
+
+    <h1>Budejtti kalamiehille</h1>
+
+    <div class="image-gallery">
+        <div class="image-container">
+            <img src="kelavapa1.png" alt="Image 1" onclick="openImage(this)">
+            <p>Ligma Kelavapa setti 50e</p>
+        </div>
+        <div class="image-container">
+            <img src="rod1 (1).jpg" alt="Image 2" onclick="openImage(this)">
+            <p>Sigma Kelavapa setti 100e</p>
+        </div>
+        <div class="image-container">
+            <img src="rod 2 (1).jpg" alt="Image 3" onclick="openImage(this)">
+            <p>Nugma Kelavapa setti 70e</p>
+        </div>
+        <div class="image-container">
+            <img src="baits 1 (1).jpg" alt="Image 4" onclick="openImage(this)">
+            <p>Busty ahvenuistin 10e</p>
+        </div>
+        <div class="image-container">
+            <img src="baits2 (1).jpg" alt="Image 5" onclick="openImage(this)">
+            <p>All in one jerkit 50e </p>
+        </div>
+        <div class="image-container">
+            <img src="baits 3 (1).jpg" alt="Image 6" onclick="openImage(this)">
+            <p>Popperi 10e</p>
+        </div>
+        <div class="image-container">
+            <img src="baits 4 (1).jpg" alt="Image 7" onclick="openImage(this)">
+            <p>Swimbait setti 40e</p>
+        </div>
+        <div class="image-container">
+            <img src="baits 8 (1) (1).jpg" alt="Image 8" onclick="openImage(this)">
+            <p>Crankbait 10e</p>
+        </div>
+        <div class="image-container">
+            <img src="baits 9 (1).jpg" alt="Image 9" onclick="openImage(this)">
+            <p>Rattling bait 15e</p>
+        </div>
+        <div class="image-container">
+            <img src="baits 7 (1).jpg" alt="Image 10" onclick="openImage(this)">
+            <p>Rainbow trout swimbait 15e</p>
+        </div>
+    </div>
+
+    <script>
+        function openImage(img) {
+            const modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100%';
+            modal.style.height = '100%';
+            modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            modal.style.display = 'flex';
+            modal.style.justifyContent = 'center';
+            modal.style.alignItems = 'center';
+            modal.onclick = function() {
+                document.body.removeChild(modal);
+            };
+
+            const newImg = document.createElement('img');
+            newImg.src = img.src;
+            newImg.style.maxWidth = '90%';
+            newImg.style.maxHeight = '90%';
+            modal.appendChild(newImg);
+            document.body.appendChild(modal);
+        }
+    </script>
+
+</body>
+</html>

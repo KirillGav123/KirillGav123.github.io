@@ -1,0 +1,120 @@
+# Kirill's Bait&Tackle
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirill's bait&tackle</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Container for the background sections */
+        .section {
+            height: 100vh; /* Full screen height */
+            width: 100vw; /* Full screen width */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Each section corresponds to a different background image */
+        #section1 {
+            background-image: url('Kuha 2.jpg'); /* Replace with your image URL */
+        }
+
+        #section3 {
+            background-image: url('Kuha 3.jpg'); /* Replace with your image URL */
+        }
+
+        #section4 {
+            background-image: url('hauki.jpg'); /* Replace with your image URL */
+        }
+
+        /* Add some text or content in each section */
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: white;
+            font-size: 3em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+        .nav a:hover {
+            background-color: #575757;
+        }
+    </style>
+</head>
+<body>
+    <img src="Logo.png" alt="Description of Image" style="float: right; height: 99px;width: 110px;">
+
+    <header>
+        <h1>Kirill's Bait&Tackle</h1>
+    </header>
+
+    <nav class="nav">
+        <a href="oma sivu dig.html">Etusivu</a>
+        <a href="Alesivu.html">Valikoima</a>
+        <a href="Alennuskkoodi.html">Ostoskori</a>
+    </nav>
+
+    <section class="section" id="section1">
+        <h2>Tervetuloa perheomistamaan kalastuskauppaan!</h2>
+        <p>Kalastajan unelma alkaa täältä! Meiltä saat parhaat vieheet, vavat ja varusteet, joilla varmasti saa vonkaleita! Suoraan Pohjois-Savosta ovellesi kahdessa päivässä!</p>
+    </section>
+
+    <!-- Four sections that will scroll with different backgrounds -->
+    <div id="section1" class="section">
+        <div class="content">Kalasta niinkuin ammattilaiset!</div>
+    </div>
+    <div id="section3" class="section">
+        <div class="content">Uistimet joilla varmasti saa;)</div>
+    </div>
+    <div id="section4" class="section">
+        <div class="content">Osta ja nauti tuloksesta!</div>
+    </div>
+
+    <script>
+        // Optional JavaScript if you need to add functionality later
+        // For example, you could animate transitions or lazy load images here
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Kirill's bait and tackle</p>
+    </footer>
+</body>
+</html>
